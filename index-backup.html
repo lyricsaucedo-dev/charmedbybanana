@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charmedbybanana — handmade charms you'll obsess over ✨</title>
+  <meta name="description" content="Handmade beaded bracelets, keychains & phone charms made with love. Cute, sparkly, one-of-a-kind charms shipped straight to your door." />
+  <meta name="author" content="charmedbybanana" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <img src="assets/favicon.png" alt="Logo" class="logo-icon" />
+      </a>
+      <div class="nav-links">
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#shop" class="btn btn-bubble btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Shop
+        </a>
+        <a href="#" class="btn btn-bubble btn-sm cart-btn" onclick="openCartModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="cart-counter" id="cartCounter">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="sparkle-field" id="sparkleField"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="badge">✨ handmade with love</span>
+        <h1 class="hero-title">
+          handmade charms <br />
+          you'll <span class="highlight">obsess over</span> ✨
+        </h1>
+        <p class="hero-description">
+          Tiny treasures, big personality. Each charm is hand-beaded, packed with love, and shipped straight from my studio to your wrist.
+        </p>
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-hero btn-xl">Shop the drop 🍌</a>
+          <a href="#about" class="btn btn-bubble btn-xl">My story</a>
+        </div>
+        <div class="hero-stats">
+          <span>⭐ 200+ happy customers</span>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-glow"></div>
+        <div class="hero-carousel" id="heroCarousel">
+          <div class="hero-carousel-track" id="heroCarouselTrack">
+            <!-- Images loaded by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-content" id="marqueeContent">
+      <!-- Content populated by JS -->
+    </div>
+  </div>
+
+  <!-- Catalog -->
+  <section id="shop" class="catalog">
+    <div class="catalog-header">
+      <p class="catalog-label">the collection</p>
+      <h2 class="catalog-title">pick your fave 💖</h2>
+      <p class="catalog-description">Each piece is one-of-a-kind. When it's gone, it's gone (for real for real).</p>
+    </div>
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- Products populated by JS -->
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-image-wrapper">
+        <div class="about-image">
+          <img src="assets/about.jpg" alt="About charmedbybanana" class="about-image" />
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="about-label">about me</p>
+        <h2 class="about-title">tiny charms, <br />big obsession.</h2>
+        <p class="about-text">What started as a way to use up bead jars during a sleepy afternoon turned into a full-on charm addiction. Every piece in the shop is hand-beaded by me in small batches — no two are exactly alike.</p>
+        <p class="about-text">Pop one on your bag, your wrist, your phone — wherever your little heart desires. ✨</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="faq-header">
+      <p class="faq-label">questions?</p>
+      <h2 class="faq-title">the lil details ✨</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <!-- FAQ items populated by JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/favicon.png" alt="Logo" class="footer-icon" />
+      </div>
+      <p class="footer-text">made with 💖 + a lot of beads · © <span id="year"></span></p>
+      <p class="footer-text">website made with care by <a href="mailto:lyricsaucedo.dev@gmail.com" class="footer-link">Lyric Saucedo <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a></p>
+      <a href="https://instagram.com/charmedbybanana" target="_blank" rel="noreferrer" class="btn btn-bubble btn-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        @charmedbybanana
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast">
+    <div class="toast-content">
+      <h4 id="toastTitle" class="toast-title"></h4>
+      <p id="toastDescription" class="toast-description"></p>
+    </div>
+  </div>
+
+  <!-- Customization Modal -->
+  <div id="customizationModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Customize Your Charm ✨</h3>
+        <button class="modal-close" onclick="closeModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="theme">Theme</label>
+          <input type="text" id="theme" placeholder="e.g., pastel, galaxy, rainbow..." />
+        </div>
+        <p class="modal-product-info" id="modalProductName"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-bubble btn-sm" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-hero btn-sm" onclick="addToCart()">Add to Bag</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content cart-modal-content">
+      <div class="modal-header">
+        <h3>Your Bag 🍌</h3>
+        <button class="modal-close" onclick="closeCartModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items populated by JS -->
+        </div>
+        <div id="emptyCartMessage" class="empty-cart">
+          <p>Your bag is empty! 🍌</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="cart-total">
+          <span>Total: $<span id="cartTotal">0</span></span>
+        </div>
+        <button class="btn btn-hero btn-sm" onclick="checkoutWithStripe()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shipping Modal -->
+  <div id="shippingModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Shipping Info 🚚</h3>
+        <button class="modal-close" onclick="closeShippingModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="shippingName">Name</label>
+          <input type="text" id="shippingName" placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label for="shippingEmail">Email</label>
+          <input type="email" id="shippingEmail" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="shippingPhone">Phone Number</label>
+          <input type="tel" id="shippingPhone" placeholder="(555) 123-4567" />
+        </div>
+        <div class="form-group">
+          <label for="shippingStreet">Street Address</label>
+          <input type="text" id="shippingStreet" placeholder="123 Main Street" />
+        </div>
+        <div class="form-group">
+          <label for="shippingCity">City</label>
+          <input type="text" id="shippingCity" placeholder="New York" />
+        </div>
+        <div class="form-group">
+          <label for="shippingState">State</label>
+          <input type="text" id="shippingState" placeholder="NY" />
+        </div>
+        <div class="form-group">
+          <label for="shippingZip">ZIP Code</label>
+          <input type="text" id="shippingZip" placeholder="10001" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-bubble btn-sm" onclick="closeShippingModal()">Cancel</button>
+        <button class="btn btn-hero btn-sm" onclick="submitShipping()">Submit Order</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

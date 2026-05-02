@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Under Construction — charmedbybanana ✨</title>
+  <meta name="description" content="We're busy making something special! Check back soon for handmade charms you'll obsess over." />
+  <meta name="author" content="charmedbybanana" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fff5f5 0%, #ffe4ec 50%, #fff0f5 100%);
+    }
+    
+    .construction-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .construction-icon {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      animation: bounce 2s ease-in-out infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .construction-title {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ff6b9d;
+      margin-bottom: 1rem;
+    }
+    
+    .construction-subtitle {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #ff8fab;
+      margin-bottom: 2rem;
+    }
+    
+    .construction-message {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    
+    .sparkles {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .sparkle {
+      animation: sparkle 1.5s ease-in-out infinite;
+    }
+    
+    .sparkle:nth-child(2) { animation-delay: 0.3s; }
+    .sparkle:nth-child(3) { animation-delay: 0.6s; }
+    .sparkle:nth-child(4) { animation-delay: 0.9s; }
+    .sparkle:nth-child(5) { animation-delay: 1.2s; }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+    
+    .construction-emoji {
+      font-size: 4rem;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="construction-container">
+    <div class="sparkles">
+      <span class="sparkle">✨</span>
+      <span class="sparkle">⭐</span>
+      <span class="sparkle">✨</span>
+      <span class="sparkle">⭐</span>
+      <span class="sparkle">✨</span>
+    </div>
+    
+    <div class="construction-icon">🚧</div>
+    
+    <h1 class="construction-title">Under Construction</h1>
+    
+    <p class="construction-subtitle">we're busy making magic! ✨</p>
+    
+    <p class="construction-message">
+      Something special is in the works! We're hand-beading new charms and adding sparkly updates to the site. Check back soon for cute treasures you'll obsess over. 💖
+    </p>
+    
+    <div class="construction-emoji">🍌✨💖</div>
+    
+    <div class="sparkles">
+      <span class="sparkle">✨</span>
+      <span class="sparkle">⭐</span>
+      <span class="sparkle">✨</span>
+      <span class="sparkle">⭐</span>
+      <span class="sparkle">✨</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/favicon.png" alt="Logo" class="footer-icon" />
+      </div>
+      <p class="footer-text">made with 💖 + a lot of beads · © <span id="year"></span></p>
+      <p class="footer-text">website made with care by <a href="mailto:lyricsaucedo.dev@gmail.com" class="footer-link">Lyric Saucedo <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a></p>
+      <a href="https://instagram.com/charmedbybanana" target="_blank" rel="noreferrer" class="btn btn-bubble btn-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        @charmedbybanana
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

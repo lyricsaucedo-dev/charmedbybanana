@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charmedbybanana — Showcase ✨</title>
+  <meta name="description" content="Handmade beaded bracelets, keychains & phone charms made with love." />
+  <meta name="author" content="charmedbybanana" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/favicon.png" alt="Logo" class="logo-icon" />
+      </a>
+      <div class="nav-links">
+        <a href="index.html#shop" class="nav-link">Shop</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+      </div>
+      <div class="nav-actions">
+        <a href="index.html#shop" class="btn btn-bubble btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Shop
+        </a>
+        <a href="#" class="btn btn-bubble btn-sm cart-btn" onclick="openCartModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="cart-counter" id="cartCounter">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Showcase Gallery -->
+  <main class="showcase-main">
+    <div class="showcase-header">
+      <h1>Showcase Gallery</h1>
+      <p>A collection of custom charm creations ✨</p>
+    </div>
+    <div class="showcase-gallery" id="showcaseGallery">
+      <!-- Images loaded by JavaScript -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span class="footer-icon">🍌</span>
+        <span class="footer-brand">charmedbybanana</span>
+      </div>
+      <p class="footer-text">made with 💖 + a lot of beads · © <span id="year"></span></p>
+      <p class="footer-text">website made with care by <a href="mailto:lyricsaucedo.dev@gmail.com" class="footer-link">Lyric Saucedo <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a></p>
+      <a href="https://instagram.com/charmedbybanana" target="_blank" rel="noreferrer" class="btn btn-bubble btn-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        @charmedbybanana
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Load showcase images from Productexamples folder
+    const showcaseImages = [
+      "assets/Productexamples/651793616_999398432651835_5247240270234151535_n.jpg",
+      "assets/Productexamples/654237884_1622289359004347_5694652506851277362_n.jpg",
+      "assets/Productexamples/655300664_1616891769539272_9089171087142438353_n.jpg",
+      "assets/Productexamples/655589505_1512811017299111_8471287371722016722_n.jpg",
+      "assets/Productexamples/656832885_970791532308937_1846400715009402438_n.jpg",
+      "assets/Productexamples/657455163_1341861527840199_4394726100697206958_n.jpg",
+      "assets/Productexamples/657956582_978808197854181_4276569562980094647_n.jpg",
+      "assets/Productexamples/658930329_27579540544968946_5963714997845401319_n.jpg",
+      "assets/Productexamples/665011690_1729863228175185_4273710875869228099_n.jpg",
+      "assets/Productexamples/665189502_1650378512773210_1522311441175281037_n.jpg",
+      "assets/Productexamples/671087764_1972381600036265_6007298158154958140_n.jpg",
+      "assets/Productexamples/672010635_1437261411776526_1337401179123544455_n.jpg",
+      "assets/Productexamples/672027705_1729555221378702_5509327224843784980_n.jpg",
+      "assets/Productexamples/672050756_986598640383823_4491415262466415892_n.jpg",
+      "assets/Productexamples/672076073_2756031198105611_8058359625366656411_n.jpg",
+      "assets/Productexamples/672093557_1010329428839545_3286004845000460671_n.jpg",
+      "assets/Productexamples/672127868_2016032819012742_2079210941280863718_n.png",
+      "assets/Productexamples/672249956_2115516272324784_4380898232443107297_n.jpg",
+      "assets/Productexamples/672264231_1534289518037603_1204590600797388791_n.jpg",
+      "assets/Productexamples/672302771_1360029229309020_125679233951654022_n.jpg",
+      "assets/Productexamples/672444144_26193990363629825_895886418556046316_n.png",
+      "assets/Productexamples/672554574_1258845229299458_2372257795767973598_n.jpg",
+      "assets/Productexamples/672584051_966697426226639_6142678759198196743_n.jpg",
+      "assets/Productexamples/672689518_820897717283384_5462027886475563438_n.jpg",
+      "assets/Productexamples/673464071_4545529469096130_11240939531520829_n.jpg",
+      "assets/Productexamples/673484965_1997568844452904_3905651503177618539_n.jpg",
+      "assets/Productexamples/673666736_1686371622553649_1308198656644115045_n.jpg",
+      "assets/Productexamples/673830596_1616960229531082_4193291319184182615_n.jpg",
+      "assets/Productexamples/673836064_994551200202860_6285749005700259521_n.jpg",
+      "assets/Productexamples/674347491_1474161644212027_3421472571941554011_n.png",
+      "assets/Productexamples/674355767_1505695701086484_1328138063553677294_n.jpg",
+      "assets/Productexamples/674358895_968570879094001_6829740819143098209_n.jpg",
+      "assets/Productexamples/674903323_1407844924431457_7988735968614769994_n.png",
+      "assets/Productexamples/676488661_1286682279656172_348160780007007271_n.jpg",
+      "assets/Productexamples/676644454_1341415347893991_4429830888461059251_n.jpg",
+      "assets/Productexamples/676857611_1600843760997156_8690657936133449061_n.jpg",
+      "assets/Productexamples/676880058_955181673763270_4990211520758192672_n.jpg",
+      "assets/Productexamples/676902168_958209663844607_7507271386025563182_n.jpg",
+      "assets/Productexamples/677166499_967779395829501_7286825612719426498_n.jpg",
+      "assets/Productexamples/677776354_1509865160526239_8723434072709349507_n.jpg",
+      "assets/Productexamples/678656445_1514600373522007_686611346877469292_n.jpg",
+      "assets/Productexamples/679009636_1674578140441883_6911412457999567757_n.jpg",
+      "assets/Productexamples/679061297_2535899356829308_1507241154964594068_n.jpg",
+    ];
+
+    function initShowcase() {
+      const gallery = document.getElementById('showcaseGallery');
+      if (!gallery) return;
+
+      showcaseImages.forEach(imagePath => {
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'showcase-item';
+        
+        const img = document.createElement('img');
+        img.src = imagePath;
+        img.alt = 'Charm creation';
+        img.loading = 'lazy';
+        
+        imgContainer.appendChild(img);
+        gallery.appendChild(imgContainer);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initShowcase();
+    });
+  </script>
+</body>
+</html>
